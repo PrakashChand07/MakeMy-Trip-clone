@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.NavbarContainer{
+    width: 100%;
+    height: 68px;
+    background: #fff;
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 40%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.logoTrip a img{
+    width: 143px;
+    height: 70px;
+    margin-left: 7vw;
+}
+.navList ul{
+    display: flex;
+    line-height: 12px;
+    
+}
+.navList ul li{
+    list-style: none;
+}
+.iconSize{
+    height: 30px !important;
+    width: 50px !important;
+
+}
+.navList ul li a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+.loginPage a{
+    text-decoration: none;
+    margin-right: 5vw;
+}
+.mycreate{
+    padding:5px 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background:linear-gradient(45deg,rgb(24, 250, 3),green);
+    color: #fff;
+}
+.textIcon{
+    margin-right: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.navList ul li a.active {
+    color: rgb(0, 174, 255);
+}
+.loginText{
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+.show{
+    color:rgb(0, 174, 255); 
+}
+.setName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usename{
+    margin-right: 2vw;
+}
+.sign_outIcon{
+    margin-left:10px;
+    
+}
+
+@media only screen and (max-width:600px) {
+    .navList ul {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      background: linear-gradient(to bottom, #051322, #15457c);
+      position: fixed;
+      top: 8vh;
+      left: 0vw;
+  }
+  .navList ul li a{
+    color: #fff;
+    padding: 16.5px;
+}
+
+.logoTrip a img {
+    margin-left: 3vw;
+}
+.loginText{
+    margin-right: 2vw;
+}
+
+  }

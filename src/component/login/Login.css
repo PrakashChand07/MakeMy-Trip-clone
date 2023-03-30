@@ -1,0 +1,48 @@
+.login_container{
+    width: 300px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 10px 30px;
+    position: relative;
+    top:20vh;
+    left:40vw;
+}
+.signBox{
+display: flex;
+flex-direction: column;
+font-size: 15px;
+font-weight: 500;
+color: #4a4a4a;
+}
+.logoMakeMyTrip a img{
+    width: 113px;
+    height: 36px;
+    margin: 10px 0px 10px 5.5vw;
+}
+.signBox input{
+    outline: none;
+    border: none;
+    margin: 8px 0px 35px 0px;
+    font-size: 15px;
+    border-bottom:1px solid #4a4a4a;
+}
+.login_btn button{
+    width: 300px;
+}
+.newUser{
+    margin:10px 0px 30px 6.3vw;
+}
+
+
+
+@media only screen and (max-width:600px){
+    .login_container{
+        top:20vh;
+        left:6vw;
+    }
+    .logoMakeMyTrip a img{
+        margin: 10px 0px 10px 19.5vw;
+    }
+    .newUser{
+        margin:10px 0px 30px 19.5vw;
+    }
+}

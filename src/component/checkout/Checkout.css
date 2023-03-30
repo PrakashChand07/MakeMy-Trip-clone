@@ -1,0 +1,34 @@
+.totalCharge{
+    border: none;
+    margin:10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.showFair{
+    border: 2px solid black;
+    margin: 10px 10px;
+    padding: 20px;
+    width: 30vw; 
+    border-radius: 5px;
+}
+.fare{
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px ;
+}
+.fare input{
+    font-size: 15px;
+    padding: 5px;
+    width: 20vw;
+    outline: none;
+}
+/*payment success __________________________________________________________ */
+.payment{
+   position:absolute;
+   left: 40%;
+   bottom: 50%;
+}
+.payment_sucess button{
+    margin-left: 4.5vw;
+    width: 10vw;
+}
