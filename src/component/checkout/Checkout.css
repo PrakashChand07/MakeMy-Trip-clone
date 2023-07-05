@@ -32,3 +32,24 @@
     margin-left: 4.5vw;
     width: 10vw;
 }
+@media only screen and (max-width:600px) {
+    .totalCharge{
+        border: none;
+        margin-top:20vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .showFair {
+        border: 2px solid black;
+        margin: 10px -72px;
+        padding: 20px;
+        width: 82vw;
+        border-radius: 5px;
+    }
+    .fare input{
+        font-size: 15px;
+        padding: 5px;
+        width: 78vw;
+        outline: none;
+    }
+ }

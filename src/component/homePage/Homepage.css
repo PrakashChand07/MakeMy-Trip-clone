@@ -90,7 +90,7 @@ margin: 10px 5px;
     border-radius: 10px;
   }
   .heading_Location{
-    font-size: 40px;
+    font-size: 25px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .Information{
@@ -108,6 +108,20 @@ margin: 10px 5px;
   .info_tab{
     width: 400px;
     height: 220px;
+  }
+  .bottomInfo{
+    margin: 20px 60px;
+  }
+  .bottomHeadline{
+    font-size: 12px;
+    color: #4b4b4b;
+    font-weight: 600;
+  }
+
+  .bottomDetails{
+    font-size: 11.2px;
+    color:#4a4a4a;
+    margin: 20px 0px;
   }
   .footerBottom{
     background: #000;
@@ -128,20 +142,27 @@ margin: 10px 5px;
   .facebookIcon{
     margin-left: 10px;
   }
+
+
   @media only screen and (max-width:600px) {
 
 .topLocation {
-  margin: 90px 10px 10px -30px;
+     margin: 20px 10px 10px -30px;
     box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
     background-color: #fff;
     border-radius: 10px;
 }
 
+.heading_Location {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .Information {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
+
 .info_tab {
   width: 360px;
   height: 260px;

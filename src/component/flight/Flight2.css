@@ -1,20 +1,22 @@
+body{
+  background-color: aliceblue;
+}
 .flight_container {
   width: 90vw;
-  height: 35vh;
-  border: 2px solid white;
+  height: 48vh;
   position: absolute;
   top: 80px;
   left: 40px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  background-color: #fff;
+  background-color: white;
 }
 .flight_search{
   position: absolute;
   width: 216px;
   padding: 10px;
   margin-bottom: -32px;
-  top: 42.5vh;
+  top: 56.5vh;
   left: 42vw;
   border-radius: 34px;
   border: none;
@@ -102,18 +104,18 @@ a{
 }
 .flights{
   margin-top: 320px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .flights-data{
   margin-top: 10px;
-  padding: 30px 0px;
-  border: 2px solid #363636 ;
-  margin: 10px 20px;
-  
+  padding: 30px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: white;
 }
 .flight_from{
   display: flex;
-  
   justify-content: space-evenly;
 }
 
@@ -126,16 +128,61 @@ a{
   margin-bottom: 5px;
   font-weight: bold;
 }
+
+input[type="radio"] {
+  margin: 15px 0px 0px 10px;
+    font-size: 150%;
+    background-color:#d1cfcf87;
+
+}
+.radioBottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px 0px 0px;
+}
+.trending_search{
+margin-top: 10px;
+
+}
+.trendCity{
+  background-color:#d1cfcf87;
+  padding: 5px 2px;
+  border-radius: 1px;
+}
+.filter_flights{
+  width: 300px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 10px 0px 10px;
+}
+.priceShow{
+  margin-top: 7px;
+  float: right;
+}
+.fightPriceFilter{
+  display: flex;
+  justify-content: space-between;
+}
+.filterHeading{
+margin-top: 10px;
+}
 /* -------------------------------------------------------- */
 @media only screen and (max-width:600px) {
 .flight_container {
   width: 90vw;
-  height: 50vh;
+  height: 71vh;
   top: 240px;
   left: 18px;
 }
+.radioBottom {
+  display: block;
+  margin: 5px 0 2px 5px;
+}
 .flight_search{
-  top: 75.5vh;
+  top: 95.5vh;
   left: 22vw;
 }
 .search_details {
@@ -169,9 +216,6 @@ a{
 .sub_same input {
   width: 300px;
 }
-.flights{
-  margin-top: 77vh;
-}
 .flights-data {
   margin-top: 10px;
   padding: 20px 0px;
@@ -183,5 +227,18 @@ a{
     row-gap: 15px;
     flex-wrap: wrap;
 }
-
+.topLocaton_main{
+  margin-top: 260px;
+}
+.flights{
+  margin-top: 93vh;
+flex-direction: column;
+}
+.filter_flights{
+  margin: 25px 0px 0px 25px ;
+  padding: 0px 10px;
+}.offerShow{
+  margin: 14px 10px 0px 0px;
+  float: right;
+}
 }

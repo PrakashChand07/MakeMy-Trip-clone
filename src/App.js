@@ -16,7 +16,8 @@ const App = () => {
     <>
       <Routes>
         <Route exact path='/' element={<Navbar />}>
-          <Route index path='' element={<Homepage />}></Route>
+          <Route index path='' element={<Homepage />}>
+          </Route>
           <Route exact path='flight' element={<Flight />}></Route>
           <Route exact path='hotel' element={<Hotel />}></Route>
           <Route exact path='train' element={<Train />}></Route>

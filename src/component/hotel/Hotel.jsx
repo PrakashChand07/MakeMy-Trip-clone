@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 const Flight = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -106,6 +109,12 @@ const Flight = () => {
               name='guest'
             />
           </div>
+          
+        </div>
+        <div>
+         
+        <img src={require('../assets/offer.jpg')} style={{height:"70px" , width:'100px'}}/>
+        <h3>Exculsive Offer on Delhi Hotel 50% OFF</h3>
         </div>
       </div>
       <button
@@ -115,6 +124,42 @@ const Flight = () => {
         SEARCH
       </button>
       <div className='flights'>
+        <div className='hotelDiscount filter_flights'>
+          <div>
+          <Card sx={{ maxWidth: 300 }}>
+      <CardActionArea>
+      <img src={require('../assets/image2.jpg')} style={{height:"170px" , width:'450px'}}/>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            GOA STAR HOTEL
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          This 4 Star Hotel in Delhi is located in Mahipalpur
+          Full Address of property is L 75, Gali no. 7, Near IGI Airport
+          This Hotel have 4.0 Out of 5 Rating where 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    <Card sx={{ maxWidth: 300 , marginTop:3 }}>
+      <CardActionArea>
+         <img src={require('../assets/hotelPage1.jpg')} style={{height:"170px" , width:'450px'}}/>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            THE GRAND INN
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          This 4 Star Hotel in Delhi is located in Mahipalpur
+          Full Address of property is 2206 Rajguru Road Paharganj New Delhi
+           10 Mins Walk From New Delhi Railway Station 12 mins Walk from RK Metro 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    
+          </div>
+        </div>
+        <div>
         {flightsData.map((item, ind) => (
           <div className='flights-data' key={ind}>
             <div className='flight_from'>
@@ -136,14 +181,6 @@ const Flight = () => {
                 <p>{item.check_out}</p>
               </div>
               <div className='flight_details'>
-                <p className='flight-name'>Room</p>
-                <p>{item.room_type}</p>
-              </div>
-              <div className='flight_details'>
-                <p className='flight-name'>Guest</p>
-                <p>{item.guests}</p>
-              </div>
-              <div className='flight_details'>
                 <p className='flight-name'>Price per night</p>
                 <p>{item.price_per_night} Rs</p>
               </div>
@@ -162,6 +199,8 @@ const Flight = () => {
             </div>
           </div>
         ))}
+        <div>no more result...!!</div>
+        </div>
       </div>
     </>
   );

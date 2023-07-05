@@ -7,7 +7,6 @@ import TrainIcon from '@mui/icons-material/Train';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import RowingIcon from '@mui/icons-material/Rowing';
 import { Button } from '@mui/material';
-import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import PaymentsIcon from '@mui/icons-material/Payments';
@@ -32,13 +31,13 @@ const Navbar = () => {
             <div>
               <Button
                 variant='contained'
+                color='success'
                 onClick={(e) => {
                   localStorage.removeItem('isLoggedIn');
                   navigate(`/login`);
                 }}
               >
                 sign out
-                <ExitToAppOutlinedIcon className='sign_outIcon' />
               </Button>
             </div>
           </div>
@@ -102,7 +101,7 @@ const Navbar = () => {
             </li>
 
             <li className='textIcon'>
-              <NavLink to='xcz'>
+              <NavLink to='xcasdz'>
                 <LocalTaxiIcon className='iconSize' />
                 tax
               </NavLink>
