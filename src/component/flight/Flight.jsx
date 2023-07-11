@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Checkbox from "@mui/material/Checkbox";
 import Slider from "@mui/material/Slider";
@@ -257,45 +257,33 @@ const Flight = () => {
          
         </div>
         <div>
-        {flightsData.map((item, ind) => (
-          <div className="flights-data" key={ind}>
-            <div className="flight_from">
-              <div className="flight_details">
-                <p className="flight-name">Airline Name</p>
-                <p>{item.airlineName}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Origin city</p>
-                <p>{item.from}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Destination city</p>
-                <p>{item.to}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Departure Date</p>
-                <p>{item.departure.departureDate}</p>
-                <p>{item.departure.departureTime}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Return Date</p>
-                <p>{item.return.returnDate}</p>
-                <p>{item.return.returnTime}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Price</p>
-                <p>{item.price} Rs</p>
-              </div>
-              <div>
-                <Button
+        {flightsData.map((ticket, ind) => (
+                    <div className="flight-card" key={ind}>
+                    <div className="flight-card-header">
+                      <div className="flight-name">{ticket.airlineName}</div>
+                      <div className="flight-time">
+                        {ticket.departure.departureDate} - {ticket.return.returnDate}
+                      </div>
+                      <div className="flight-duration">{ticket.duration}</div>
+                    </div>
+                    <div className="flight-card-body">
+                      <div>{ticket.departure.departureTime}</div>
+                      <div className="flight-from-to">
+                        {ticket.from} → {ticket.to}
+                      </div>
+                      <div>{ticket.return.returnTime}</div>
+                    </div>
+                    <div className="flight-card-footer">
+                      <div className="flight-price">₹{ticket.price}</div>
+                      <Button
                   variant="contained"
-                  onClick={() => isLoggedInComponent(item.price)}
+                  className="book-now-button"
+                  onClick={() => isLoggedInComponent(ticket.price)}
                 >
-                  BOOK
+                  Book Now
                 </Button>
-              </div>
-            </div>
-          </div>
+                    </div>
+                  </div>
         ))}
 <div>no more result...!!</div>
         </div>

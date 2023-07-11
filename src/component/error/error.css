@@ -1,6 +1,4 @@
-.error_img{
-    margin-left: 288px;
-}
+
 @media only screen and (max-width:600px) {
 .error_img{
     margin: 20vh 0px 0px -328px;

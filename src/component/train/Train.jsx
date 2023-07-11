@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 const Flight = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -128,9 +128,12 @@ const Flight = () => {
           </div>
         </div>
         <div>
-         <img src={require('../assets/offer.jpg')} style={{height:"50px" , width:'80px'}}/>
-         <h3 className="offerShow"> New User 50% OFF</h3>
-         </div>
+          <img
+            src={require("../assets/offer.jpg")}
+            style={{ height: "50px", width: "80px" }}
+          />
+          <h3 className="offerShow"> New User 50% OFF</h3>
+        </div>
       </div>
       <button
         className="flight_search"
@@ -139,79 +142,71 @@ const Flight = () => {
         SEARCH
       </button>
       <div className="flights">
-      <div className="filter_flights">
-      <Card sx={{ maxWidth: 300 }}>
-      <CardActionArea>
-      <img src={require('../assets/train.jpg')} style={{height:"170px" , width:'450px'}}/>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            TRIP GRARANTEE ON TRAINS!
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Make your train travel easier, penalty free and worry-free
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <Card sx={{ maxWidth: 300 , marginTop:3 }}>
-      <CardActionArea>
-         <img src={require('../assets/train2.webp')} style={{height:"170px" , width:'450px'}}/>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            FREE CANCELLATION ON TRAIN BOOKING!
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Waitlisted tickets no more. Get a confirmed ticket or a free upgrade to flights, cabs & more. 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        <div className="filter_flights">
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <img
+                src={require("../assets/train.jpg")}
+                style={{ height: "170px", width: "450px" }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  TRIP GRARANTEE ON TRAINS!
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Make your train travel easier, penalty free and worry-free
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <Card sx={{ maxWidth: 300, marginTop: 3 }}>
+            <CardActionArea>
+              <img
+                src={require("../assets/train2.webp")}
+                style={{ height: "170px", width: "450px" }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  FREE CANCELLATION ON TRAIN BOOKING!
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Waitlisted tickets no more. Get a confirmed ticket or a free
+                  upgrade to flights, cabs & more.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </div>
         <div>
-        {trainsData.map((item, ind) => (
-          <div className="flights-data" key={ind}>
-            <div className="flight_from">
-              <div className="flight_details">
-                <p className="flight-name">Train Number</p>
-                <p>{item.train_number}</p>
+          {trainsData.map((train, ind) => (
+            <div className="flight-card" key={ind}>
+              <div className="flight-card-header">
+                <div className="flight-name">Train-No.{train.train_number}</div>
+                <div className="flight-time">
+                  {train.departure.departureDate}
+                </div>
+                <div className="flight-duration">{train.duration}</div>
               </div>
-              <div className="flight_details">
-                <p className="flight-name">Origin city</p>
-                <p>{item.from}</p>
+              <div className="flight-card-body">
+                <div>{train.departure.departureTime}</div>
+                <div className="flight-from-to">
+                  {train.from} → {train.to}
+                </div>
+                <div>{train.kilometers} Km</div>
               </div>
-              <div className="flight_details">
-                <p className="flight-name">Destination city</p>
-                <p>{item.to}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Departure Date</p>
-                <p>{item.departure.departureDate}</p>
-                <p>{item.departure.departureTime}</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Duration</p>
-                <p>{item.duration}</p>
-                <p>{item.kilometers}Km</p>
-              </div>
-              <div className="flight_details">
-                <p className="flight-name">Price</p>
-                <p>{item.price} Rs</p>
-              </div>
-              <div>
+              <div className="flight-card-footer">
+                <div className="flight-price">₹{train.price}</div>
                 <Button
                   variant="contained"
-                  onClick={() => isLoggedInComponent(item.price)}
+                  onClick={() => isLoggedInComponent(train.price)}
                 >
                   BOOK
                 </Button>
               </div>
-            </div>
-          </div>
-        ))}
-         <div>no more result...!!</div>
+            </div> 
+          ))}
+          <div>no more result...!!</div>
         </div>
-
-       
       </div>
     </>
   );
